@@ -40,4 +40,5 @@ console.log(error);
 }
 })();
 
-## Support
+## Credits
+  https://github.com/Applicafroguy/vimeo-uploader
