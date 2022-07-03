@@ -11,7 +11,7 @@
 
 To install Node.js, run the following command:
 
-     npm install @darkpoison/vimeo-api
+     npm install @hushpoison/vimeo-api
 
 ## Advanced examples
 

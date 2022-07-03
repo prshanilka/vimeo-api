@@ -1,7 +1,7 @@
 {
-  "name": "@darkpoison/vimeo-api",
-  "version": "1.0.0",
-  "description": "TypeScript NPM Module Boilerplate",
+  "name": "@hushpoison/vimeo-api",
+  "version": "1.0.1",
+  "description": "Viemo Node API",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
