@@ -1,0 +1,54 @@
+{
+  "name": "@darkpoison/vimeo-api",
+  "version": "0.0.1",
+  "description": "TypeScript NPM Module Boilerplate",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "start": "node lib/example/index.js",
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.(js|ts)\"",
+    "lint": "eslint src --ext .js,.ts",
+    "lint:fix": "eslint src --fix --ext .js,.ts",
+    "test": "jest --config jest.config.js",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hebertcisco/ts-npm-package-boilerplate.git"
+  },
+  "keywords": [
+    "vimeo",
+    "api",
+    "node",
+    "typescript"
+  ],
+  "author": "Ramesh Shanilka",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hebertcisco/ts-npm-package-boilerplate/issues"
+  },
+  "homepage": "https://github.com/hebertcisco/ts-npm-package-boilerplate#readme",
+  "devDependencies": {
+    "@types/jest": "28.1.1",
+    "@typescript-eslint/eslint-plugin": "5.27.0",
+    "@typescript-eslint/parser": "5.27.0",
+    "eslint": "8.17.0",
+    "eslint-plugin-jest": "26.5.3",
+    "jest": "28.1.0",
+    "prettier": "2.6.2",
+    "ts-jest": "28.0.4",
+    "typescript": "4.7.3"
+  },
+  "files": [
+    "lib/**/*"
+  ],
+  "dependencies": {
+    "axios": "^0.27.2",
+    "tus-js-client": "^3.0.0-0"
+  }
+}
