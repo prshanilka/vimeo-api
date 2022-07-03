@@ -19,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hebertcisco/ts-npm-package-boilerplate.git"
+    "url": "git+https://github.com/prshanilka/vimeo-api.git"
   },
   "keywords": [
     "vimeo",
@@ -30,9 +30,9 @@
   "author": "Ramesh Shanilka",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/hebertcisco/ts-npm-package-boilerplate/issues"
+    "url": "https://github.com/prshanilka/vimeo-api/issues"
   },
-  "homepage": "https://github.com/hebertcisco/ts-npm-package-boilerplate#readme",
+  "homepage": "https://github.com/prshanilka/vimeo-api#readme",
   "devDependencies": {
     "@types/jest": "28.1.1",
     "@typescript-eslint/eslint-plugin": "5.27.0",
