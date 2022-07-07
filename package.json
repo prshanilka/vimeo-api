@@ -1,6 +1,6 @@
 {
   "name": "@hushpoison/vimeo-api",
-  "version": "1.0.1",
+  "version": "1.0.12",
   "description": "Viemo Node API",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -11,7 +11,7 @@
     "lint": "eslint src --ext .js,.ts",
     "lint:fix": "eslint src --fix --ext .js,.ts",
     "prepare": "npm run build",
-    "prepublishOnly": "npm test && npm run lint",
+    "prepublishOnly": "npm run lint",
     "preversion": "npm run lint",
     "version": "npm run format && git add -A src",
     "postversion": "git push && git push --tags"
@@ -37,8 +37,6 @@
     "@typescript-eslint/eslint-plugin": "5.27.0",
     "@typescript-eslint/parser": "5.27.0",
     "eslint": "^8.17.0",
-    "eslint-plugin-jest": "26.5.3",
-    "jest": "28.1.0",
     "prettier": "2.6.2",
     "ts-jest": "28.0.4",
     "typescript": "^4.7.3"

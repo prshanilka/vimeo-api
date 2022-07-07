@@ -12,7 +12,7 @@ const getTranscodingStatus = async (videoId: string, authHeaders: AuthHeaders): 
     }
     throw new Error('Sorry! Failed to fetch the transcoding status');
   } catch (err: any) {
-    throw new Error(err.message || 'Sorry! Failed to reach Vimeo at the moment');
+    throw Error('Sorry! Failed to reach Vimeo at the moment');
   }
 };
 

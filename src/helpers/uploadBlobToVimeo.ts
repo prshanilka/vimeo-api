@@ -1,19 +1,18 @@
 import * as tus from 'tus-js-client';
 
-const uploadBlobToVimeo = async (uploadLink: string, blob: any): Promise<any> => {
-  const uploadPromise = new Promise((resolve, reject) => {
-    const upload = new tus.Upload(blob, {
+const uploadBlobToVimeo = (uploadLink: string, blob: Buffer, s:() => void , e:(error:string) => void) => {
+    new tus.Upload(blob as unknown as Blob, {
       uploadUrl: uploadLink,
-      onError: (error: any) => {
-        reject(error);
+      endpoint: uploadLink,
+      retryDelays: [0, 3000, 6000, 12000, 24000],
+      chunkSize: 10000000,
+      onError: (error) => {
+        e('Failed: ' + error);
       },
       onSuccess: () => {
-        resolve(true);
+        s();
       },
-    });
-    upload.start();
-  });
-  return uploadPromise;
+    }).start();
 };
 
 export default uploadBlobToVimeo;

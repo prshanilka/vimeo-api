@@ -1,8 +1,9 @@
 // import { readFileSync } from 'fs';
 // import Vimeo from '../index';
+// import { IVimeo } from '../types';
 
-// let data = readFileSync('./lib/example/mnv.mp4');
-// const t = Vimeo({
+// //let data = readFileSync('./lib/example/mnv.mp4');
+// const t:IVimeo = Vimeo({
 //   token: '',
 // });
 
