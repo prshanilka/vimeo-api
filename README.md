@@ -15,7 +15,7 @@ To install Node.js, run the following command:
 
 
 
-### genarate Upload Link 
+### Genarate Upload Link 
      vimeoUploadLink(fileLength: number, fileName: string)
      
 ### Upload Video Blob (url = genarated url from above function)
@@ -25,9 +25,10 @@ To install Node.js, run the following command:
      thumbnailForPrivateVideo(id: string, thumbnailWidth: number)
      thumbnailForPublicVideo(id: string, thumbnailWidth: VideoSize)
 
-###Delete video(id = vimeo video id)
+### Delete video(id = vimeo video id)
      deleteVideo(id: string)
-###Insert Video To Folder in Vimeo
+     
+### Insert Video To Folder in Vimeo
      moveToFolder(id: string, folderId: string)
      
 ## Advanced examples     
