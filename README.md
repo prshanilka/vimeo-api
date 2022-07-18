@@ -13,8 +13,24 @@ To install Node.js, run the following command:
 
      npm install @hushpoison/vimeo-api
 
-## Advanced examples
 
+
+### genarate Upload Link 
+     vimeoUploadLink(fileLength: number, fileName: string)
+     
+### Upload Video Blob (url = genarated url from above function)
+     uploadBlob(file: Buffer, url: string, s:() => void , e:(error:string) => void)
+     
+### Get Thubnails
+     thumbnailForPrivateVideo(id: string, thumbnailWidth: number)
+     thumbnailForPublicVideo(id: string, thumbnailWidth: VideoSize)
+
+###Delete video(id = vimeo video id)
+     deleteVideo(id: string)
+###Insert Video To Folder in Vimeo
+     moveToFolder(id: string, folderId: string)
+     
+## Advanced examples     
 ```ts
 let data = readFileSync('./lib/example/mnv.mp4');
 const t = Vimeo({
@@ -23,8 +39,8 @@ const t = Vimeo({
 
 (async () => {
   try {
-    const c = await t.uploadFileBuffer(data, 'ddd');
-    console.log('ddd', c);
+    const {uploadLink,uri,videoUrl} = await t.vimeoUploadLink(filesize, 'filename'); //filesize is (buffer length) size of the upload file
+     t.uploadBlob(file,uploadLink,()={console.log(success)},(e:string)=>{console.log(error)}) //file must be buffer or blob
   } catch (error) {
     console.log(error);
   }
@@ -33,9 +49,7 @@ const t = Vimeo({
 (async () => {
   try {
     const c = await t.transcodeStatus('726466895');
-    console.log('ddd', c);
     const y = await t.thumbnailForPrivateVideo('726466895', 640);
-    console.log('dddy', y);
   } catch (error) {
     console.log(error);
   }
