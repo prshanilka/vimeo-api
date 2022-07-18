@@ -41,7 +41,7 @@ const t = Vimeo({
 (async () => {
   try {
     const {uploadLink,uri,videoUrl} = await t.vimeoUploadLink(filesize, 'filename'); //filesize is (buffer length) size of the upload file
-     t.uploadBlob(file,uploadLink,()={console.log(success)},(e:string)=>{console.log(error)}) //file must be buffer or blob
+     t.uploadBlob(file,uploadLink,()=>console.log(success),(e:string)=>console.log(error)) //file must be buffer or blob
   } catch (error) {
     console.log(error);
   }
